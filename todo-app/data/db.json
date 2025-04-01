@@ -1,0 +1,33 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "d-17",
+            "email": "iniciusjunioe32@gmail.com",
+            "pass": "hashed_password"
+        },
+
+        {
+            "id": 2,
+            "username": "SunnyE",
+            "email": "svetlin.y.ermenkov@gmail.com",
+            "pass": "hashed_password"
+        }
+    ],
+
+
+    "tasks": [
+        {
+            "id": 1,
+            "title": "find an ID library",
+            "completed": false,
+            "userId": "1"
+        },
+        {
+            "id": 2,
+            "title": "Connect Bootstrap",
+            "completed": false,
+            "userId": "2"
+        }
+    ]
+}
