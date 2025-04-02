@@ -1,21 +1,29 @@
 import './styles/App.css'
-import Task from './components/Task'
-// import TaskAdd from './components/TaskAdd'
-import TaskList from './components/TaskList';
 import { useState } from 'react';
-// import Login from './components/Login'
-// import Register from './components/Register'
-
-// const mockDB = [
-//     { id: 1, task: "find an ID library", completed: false, userId: 1 },
-//     { id: 2, task: "Connect Bootstrap", completed: false, userId: 2}
-// ]
+import { v4 as uuid } from "uuid";
+import TaskAdd from './components/TaskAdd';
+import TaskList from './components/TaskList';
 
 
 export default function App() {
+const [tasks, setTasks] = useState([
+    {id: uuid(), text: "task.text ? add : don't "},
+    {id: uuid(), text: "DeleteBtn"},
+    {id: uuid(), text: "CompletedToggle"},
+    {id: uuid(), text: "Open up DB Server"}
+]);
+
+const addTaskHandle = (text) => {
+    setTasks([
+        ...tasks,
+        {id: uuid(), text: text }
+    ]);
+};
+
     return (
         <>
-            
+            <TaskList tasks={tasks} />
+            <TaskAdd onTaskAdd={addTaskHandle}/>
         </>
     )
 }

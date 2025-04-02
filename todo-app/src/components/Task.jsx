@@ -1,8 +1,12 @@
-export default function Task({ taskObj }) {
-    const liStyles = { color: taskObj.completed ? "green" : "red", fontSize: taskObj.completed ? "1rem" : "2rem" }
+export default function Task({ task }) {
+    // const liStyles = { 
+    // color: task.completed ? "green" : "red", 
+    // fontSize: task.completed ? "1rem" : "1.2rem" 
+    // }
+    
     return (
-        <li style={liStyles}>
-            {taskObj.task} - {taskObj.id}
+        <li>
+            {task.text}
         </li>
     )
 }
