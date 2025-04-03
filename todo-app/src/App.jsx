@@ -6,24 +6,31 @@ import TaskList from './components/TaskList';
 
 
 export default function App() {
-const [tasks, setTasks] = useState([
-    {id: uuid(), text: "task.text ? add : don't "},
-    {id: uuid(), text: "DeleteBtn"},
-    {id: uuid(), text: "CompletedToggle"},
-    {id: uuid(), text: "Open up DB Server"}
-]);
-
-const addTaskHandle = (text) => {
-    setTasks([
-        ...tasks,
-        {id: uuid(), text: text }
+    const [tasks, setTasks] = useState([
+        { id: uuid(), text: "task.text ? add : don't " },
+        { id: uuid(), text: "CompletedToggle" },
+        { id: uuid(), text: "Open up DB Server" }
     ]);
-};
+
+    const addTaskHandle = (text) => {
+        setTasks([
+            ...tasks,
+            {
+                id: uuid(),
+                text: text
+            }
+        ]);
+    };
+
+
+    const deleteTask = (taskId) => {
+        setTasks(tasks.filter((task) => task.id !== taskId));
+    };
 
     return (
         <>
-            <TaskList tasks={tasks} />
-            <TaskAdd onTaskAdd={addTaskHandle}/>
+            <TaskAdd onTaskAdd={addTaskHandle} />
+            <TaskList tasks={tasks} deleteTask={deleteTask} />
         </>
     )
 }

@@ -37,4 +37,10 @@ Progress
 - JSON-Server & JSON-Server-Auth; (Setting up basics for later); 
 - AXIOS; 
 - React-Router-DOM
+- UUID for unique keys
 3. Setting up basic file structure and testing file relations.
+4. Task component
+5. TaskAdd component
+6. TaskList component
+7. UUID added 
+8. Delete button

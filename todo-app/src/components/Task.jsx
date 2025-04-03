@@ -1,12 +1,11 @@
-export default function Task({ task }) {
-    // const liStyles = { 
-    // color: task.completed ? "green" : "red", 
-    // fontSize: task.completed ? "1rem" : "1.2rem" 
-    // }
-    
+export default function Task({ task, deleteTask }) {
+
     return (
         <li>
-            {task.text}
+            {task.text} 
+            &nbsp;
+            <button onClick={() => deleteTask(task.id)}>Delete</button>
+
         </li>
     )
 }
