@@ -44,3 +44,5 @@ Progress
 6. TaskList component
 7. UUID added 
 8. Delete button
+9. Get JSON-Server + AXIOS up and running
+10. Edit button - CRUD DONE
