@@ -6,6 +6,7 @@ import TaskList from './components/TaskList';
 import TaskEdit from './components/TaskEdit';
 import Register from './components/Register';
 import Login from './components/Login';
+import NavBar from './components/NavBar'
 import axios from 'axios';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 
@@ -183,59 +184,17 @@ export default function App() {
 
     return (
         <>
-            <nav>
-                <ul>
-                    <li>
-                        {!isLoggedIn ?
-                            <Link to="/">Home</Link> : <Link to="/">My tasks</Link>
-                        }
-                    </li>
-                    {!isLoggedIn &&
-                        <li>
-                            <Link to="/register">Register</Link>
-                        </li>
-                    }
-                    {isLoggedIn ? (
-                        <>
-                            <li>
-                                <button onClick={handleTogglePasswordChange}>
-                                    {isChangingPassword ? 'Cancel Password Change' : 'Change Password'}
-                                </button>
-                            </li>
-                            {isChangingPassword && (
-                                <>
-                                    <li>
-                                        <input
-                                            type="password"
-                                            placeholder="New Password"
-                                            value={newPassword}
-                                            onChange={handleNewPasswordChange}
-                                        />
-                                    </li>
-                                    <li>
-                                        <button onClick={handleSavePassword}>Save Password</button>
-                                    </li>
-                                    <li>
-                                        <button onClick={handleCancelPasswordChange}>Cancel</button>
-                                    </li>
-                                </>
-                            )}
-                            <li>
-                                <button onClick={handleLogout}>Logout</button>
-                            </li>
-                            <li>
-                                <button onClick={handleDeleteUser} style={{ backgroundColor: 'red', color: 'white' }}>
-                                    Delete Account
-                                </button>
-                            </li>
-                        </>
-                    ) : (
-                        <li>
-                            <Link to="/login">Login</Link>
-                        </li>
-                    )}
-                </ul>
-            </nav>
+            <NavBar
+                isLoggedIn={isLoggedIn}
+                handleLogout={handleLogout}
+                handleTogglePasswordChange={handleTogglePasswordChange}
+                isChangingPassword={isChangingPassword}
+                newPassword={newPassword}
+                handleNewPasswordChange={handleNewPasswordChange}
+                handleSavePassword={handleSavePassword}
+                handleCancelPasswordChange={handleCancelPasswordChange}
+                handleDeleteUser={handleDeleteUser}
+            />
             <Routes>
                 <Route
                     path="/"

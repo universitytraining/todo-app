@@ -2,10 +2,10 @@
   "tasks": [
     {
       "id": "e7f4224f-d9ab-4d81-832a-af9e0d4d32c6",
-      "text": "Add",
+      "text": "Bootstrap",
       "completed": false,
       "userId": 2,
-      "title": "Bootstrap"
+      "title": "Add"
     },
     {
       "id": "95e18f86-4683-439a-8503-5d856cf54ad6",
@@ -22,18 +22,18 @@
       "userId": 2
     },
     {
-      "id": "fb7f0114-b8ba-4ab9-8f1f-3cb7494ec2e9",
-      "title": "Fix",
-      "text": "tasklist",
-      "completed": false,
-      "userId": 2
-    },
-    {
       "id": "e1912d5e-79bb-4f5d-9f48-88ed7b1d2084",
       "title": "Refactor",
       "text": "AI things",
       "completed": false,
       "userId": 1
+    },
+    {
+      "id": "1b32ef0d-16e8-4a02-812a-c2fa775e5789",
+      "title": "FIX",
+      "text": "tasklist",
+      "completed": false,
+      "userId": "2"
     }
   ],
   "users": [
@@ -44,9 +44,8 @@
       "id": 1
     },
     {
+      "password": "$2a$10$dGXzOSwTdjjnFOKgMn.wR.rNyb3AqFGITN3ErGctzSQZEx.KXV.wC",
       "email": "svetlin.y.ermenkov@gmail.com",
-      "password": "$2a$10$7jU1pk9JXNGmwObCfqiI..OGivdTpwxBJK/ONUqpwZYi7CP3V3eZG",
-      "username": "sunny",
       "id": 2
     }
   ]
