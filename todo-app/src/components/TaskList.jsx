@@ -1,19 +1,17 @@
-import Task from "./Task"
+import React from 'react';
+import Task from './Task';
 
-export default function TaskList({ tasks, deleteTask }) {
+export default function TaskList({ tasks, deleteTask, toggleComplete }) {
     return (
-        <>
-        <h2>My tasks:</h2>
-            <ul>
-                {tasks.map((task) => (
-                    <Task
-                        key={task.id}
-                        task={task}
-                        deleteTask={deleteTask}
-                    />
-                ))}
-            </ul>
-        </>
+        <div>
+            {tasks.map(task => (
+                <Task
+                    key={task.id}
+                    task={task}
+                    deleteTask={deleteTask}
+                    toggleComplete={toggleComplete}
+                />
+            ))}
+        </div>
     );
-};
-
+}

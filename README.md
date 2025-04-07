@@ -33,16 +33,17 @@ Install:
 
 Progress
 1. Initiate Vite+ReactJS project. 
-2. Installing: 
-- JSON-Server & JSON-Server-Auth; (Setting up basics for later); 
-- AXIOS; 
+2. Install Dependencies: 
+- JSON-Server & JSON-Server-Auth
+- AXIOS
 - React-Router-DOM
-- UUID for unique keys
-3. Setting up basic file structure and testing file relations.
-4. Task component
-5. TaskAdd component
-6. TaskList component
-7. UUID added 
-8. Delete button
-9. Get JSON-Server + AXIOS up and running
-10. Edit button - CRUD DONE
+- UUID
+3. Set up CRUD components
+- Task
+- TaskList 
+- TaskAdd
+- TaskEdit
+4. Authentication
+- Login
+- Register
+- Delete user with all its tasks

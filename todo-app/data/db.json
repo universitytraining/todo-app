@@ -1,42 +1,53 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "username": "d-17",
-      "email": "iniciusjunioe32@gmail.com",
-      "pass": "hashed_password"
-    },
-    {
-      "id": 2,
-      "username": "SunnyE",
-      "email": "svetlin.y.ermenkov@gmail.com",
-      "pass": "hashed_password"
-    }
-  ],
   "tasks": [
     {
-      "id": 1,
-      "text": "Login",
+      "id": "e7f4224f-d9ab-4d81-832a-af9e0d4d32c6",
+      "text": "Add",
       "completed": false,
-      "userId": "1"
+      "userId": 2,
+      "title": "Bootstrap"
     },
     {
-      "id": "59846a11-0847-445c-85a3-49a5daf0a5e5",
-      "text": "Register",
+      "id": "95e18f86-4683-439a-8503-5d856cf54ad6",
+      "title": "Fix",
+      "text": "Nav bar",
       "completed": false,
-      "userId": 1
+      "userId": 2
     },
     {
-      "id": "331c876f-8c03-4263-b4b3-13da24cefb96",
-      "text": "Get only a specific user's tasks ",
+      "id": "63619a74-2529-4ef9-8c66-24f0785cee82",
+      "title": "Bigger, sexier input!",
+      "text": "(Add and Edit)",
       "completed": false,
-      "userId": 1
+      "userId": 2
     },
     {
-      "id": "f9e4a5a7-0378-4c73-9f9b-e8f5c2bd4581",
-      "text": "Create task categories: Front-end/Back-end",
+      "id": "fb7f0114-b8ba-4ab9-8f1f-3cb7494ec2e9",
+      "title": "Fix",
+      "text": "tasklist",
+      "completed": false,
+      "userId": 2
+    },
+    {
+      "id": "e1912d5e-79bb-4f5d-9f48-88ed7b1d2084",
+      "title": "Refactor",
+      "text": "AI things",
       "completed": false,
       "userId": 1
+    }
+  ],
+  "users": [
+    {
+      "password": "$2a$10$83axRkktmPQG5tU.Sx/Ss.7deWVilYA.eeMbXr3Tguz9.RXG5b7PS",
+      "email": "iniciusjunioe32@gmail.com",
+      "username": "nikolay17-d",
+      "id": 1
+    },
+    {
+      "email": "svetlin.y.ermenkov@gmail.com",
+      "password": "$2a$10$7jU1pk9JXNGmwObCfqiI..OGivdTpwxBJK/ONUqpwZYi7CP3V3eZG",
+      "username": "sunny",
+      "id": 2
     }
   ]
 }
