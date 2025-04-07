@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import '../styles/Register.css'
 
-const Register = () => {
+export default function Register() {
     const apiUrl = "http://127.0.0.1:8787/";
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -35,7 +36,6 @@ const Register = () => {
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <form onSubmit={handleSubmit}>
                 <div>
-
                     <div>
                         <label htmlFor="email">Email:</label>
                         <input
@@ -74,5 +74,3 @@ const Register = () => {
         </div>
     );
 };
-
-export default Register;

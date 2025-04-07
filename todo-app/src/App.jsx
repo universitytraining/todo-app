@@ -3,7 +3,6 @@ import { useState, useEffect, useCallback } from 'react';
 import { v4 as uuid } from "uuid";
 import TaskAdd from './components/TaskAdd';
 import TaskList from './components/TaskList';
-import TaskEdit from './components/TaskEdit';
 import Register from './components/Register';
 import Login from './components/Login';
 import NavBar from './components/NavBar'
@@ -18,6 +17,7 @@ export default function App() {
     const [isChangingPassword, setIsChangingPassword] = useState(false);
     const [newPassword, setNewPassword] = useState('');
     const [userEmail, setUserEmail] = useState('');
+    const [userName, setUserName] = useState('');
     const navigate = useNavigate();
     const [newTaskToAdd, setNewTaskToAdd] = useState({ title: '', text: '' });
 
@@ -43,6 +43,17 @@ export default function App() {
         }
     }, [apiUrl]);
 
+    const fetchUserName = useCallback(async (userId) => {
+        if (userId) {
+            try {
+                const res = await axios.get(`${apiUrl}users/${userId}`);
+                setUserName(res.data.username || '');
+            } catch (error) {
+                console.error('Error fetching user email:', error);
+            }
+        }
+    }, [apiUrl]);
+
     useEffect(() => {
         const token = localStorage.getItem('token');
         const storedUserId = localStorage.getItem('userId');
@@ -52,13 +63,15 @@ export default function App() {
             setLoggedInUserId(storedUserId);
             fetchTasks(storedUserId);
             fetchUserEmail(storedUserId);
+            fetchUserName(storedUserId);
         } else {
             setIsLoggedIn(false);
             setLoggedInUserId(null);
             setUserEmail('');
+            setUserName('');
             setTasks([]);
         }
-    }, [fetchTasks, fetchUserEmail]);
+    }, [fetchTasks, fetchUserEmail, fetchUserName]);
 
     const addTaskHandle = async () => {
         if (loggedInUserId && newTaskToAdd.title.trim()) {
@@ -97,7 +110,7 @@ export default function App() {
                 task.id === taskToUpdate.id ? updatedTask : task
             ));
         } catch (err) {
-            console.error("Error toggling task completion:", err);
+            console.error("Task completion err:", err);
         }
     };
 
@@ -107,6 +120,7 @@ export default function App() {
         setIsLoggedIn(false);
         setLoggedInUserId(null);
         setUserEmail('');
+        setUserName('');
         setTasks([]);
         console.log('Logged out!');
         navigate('/login');
@@ -119,6 +133,7 @@ export default function App() {
         localStorage.setItem('userId', userId);
         fetchTasks(userId);
         fetchUserEmail(userId);
+        fetchUserName(userId);
     };
 
     const handleTogglePasswordChange = () => {
@@ -201,16 +216,23 @@ export default function App() {
                     element={
                         isLoggedIn ? (
                             <>
-                                <h1>My Task List</h1>
-                                <TaskList tasks={tasks} deleteTask={deleteTask} toggleComplete={toggleComplete} />
+                                <h1><span id="username">{userName}</span>'s tasks:</h1>
                                 <TaskAdd
                                     onTaskAdd={addTaskHandle}
                                     onInputChange={handleInputChange}
                                 />
+                                <TaskList
+                                    tasks={tasks}
+                                    deleteTask={deleteTask}
+                                    toggleComplete={toggleComplete}
+                                    loggedInUserId={loggedInUserId} 
+                                    apiUrl={apiUrl} 
+                                    setTasks={setTasks} 
+                                />
                             </>
                         ) : (
                             <div>
-                                <h1>Welcome, I'm your <i>task compadre</i>!</h1>
+                                <h1>Welcome to your Task<i>List</i>!</h1>
                                 <p>
                                     <Link to="/login">Log in</Link> or <Link to="/register">Register</Link>!
                                 </p>
@@ -218,7 +240,6 @@ export default function App() {
                         )
                     }
                 />
-                <Route path="/edit/:id" element={<TaskEdit onTaskUpdated={fetchTasks} loggedInUserId={loggedInUserId} />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} />} />
             </Routes>

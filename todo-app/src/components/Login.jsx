@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import '../styles/Login.css'
 
-const Login = ({ onLoginSuccess }) => {
+export default function Login({ onLoginSuccess }) {
     const apiUrl = "http://127.0.0.1:8787/";
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -63,5 +64,3 @@ const Login = ({ onLoginSuccess }) => {
         </div>
     );
 };
-
-export default Login;

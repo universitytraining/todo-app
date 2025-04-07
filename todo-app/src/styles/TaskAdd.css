@@ -1,0 +1,9 @@
+.addTaskDiv {
+        align-self: end;
+    button {
+        padding: .6rem .6rem;
+        border-radius: 1rem;
+        border: none;
+        font-weight: 600;
+    }
+}

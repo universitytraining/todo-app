@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../styles/TaskAdd.css'
 
 export default function TaskAdd({ onTaskAdd, onInputChange }) {
     const [isAdding, setIsAdding] = useState(false);
@@ -35,7 +36,7 @@ export default function TaskAdd({ onTaskAdd, onInputChange }) {
     };
 
     return (
-        <div>
+        <div className="addTaskDiv">
             {!isAdding ? (
                 <button onClick={handleStartAdding}>Add New Task</button>
             ) : (
