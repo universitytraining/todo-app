@@ -95,8 +95,13 @@ export default function App() {
 
     const deleteTask = async (taskId) => {
         try {
+            const confirm = window.confirm("Are you sure you want to delete task?");
+            if (confirm) {
             await axios.delete(apiUrl + `tasks/${taskId}`);
             setTasks(tasks.filter((task) => task.id !== taskId));
+            } else {
+                return;
+            }
         } catch (err) {
             console.error("Err deleting task:", err);
         }
@@ -225,9 +230,9 @@ export default function App() {
                                     tasks={tasks}
                                     deleteTask={deleteTask}
                                     toggleComplete={toggleComplete}
-                                    loggedInUserId={loggedInUserId} 
-                                    apiUrl={apiUrl} 
-                                    setTasks={setTasks} 
+                                    loggedInUserId={loggedInUserId}
+                                    apiUrl={apiUrl}
+                                    setTasks={setTasks}
                                 />
                             </>
                         ) : (

@@ -33,10 +33,10 @@ export default function NavBar({
                         {isChangingPassword && (
                             <>
                                 <li>
-                                    <button className='navBtn' id='passChangeSave' onClick={handleSavePassword}>Save Password</button>
+                                    <button id='passChangeSave' onClick={handleSavePassword}>Save Password</button>
                                 </li>
                                 <li>
-                                    <input
+                                    <input id='passChangeInput'
                                         type="password"
                                         placeholder="New Password"
                                         value={newPassword}
@@ -47,12 +47,12 @@ export default function NavBar({
                             </>
                         )}
                         <li>
-                            <button className='navBtn' id='passChangeBtn' onClick={handleTogglePasswordChange}>
+                            <button id='passChangeBtn' onClick={handleTogglePasswordChange}>
                                 {isChangingPassword ? 'Cancel Password Change' : 'Change Password'}
                             </button>
                         </li>
                         <li>
-                            <button className='navBtn' id='delBtn' onClick={handleDeleteUser}>
+                            <button id='delBtn' onClick={handleDeleteUser}>
                                 Delete Account
                             </button>
                         </li>

@@ -1,16 +1,9 @@
 {
   "tasks": [
     {
-      "id": "95e18f86-4683-439a-8503-5d856cf54ad6",
-      "title": "Nav bar",
-      "text": "hover effects\n",
-      "completed": false,
-      "userId": 2
-    },
-    {
       "id": "63619a74-2529-4ef9-8c66-24f0785cee82",
       "title": "Bigger, sexier input!",
-      "text": "(Add and Edit)",
+      "text": "Add and edit",
       "completed": false,
       "userId": 2
     },
@@ -23,8 +16,8 @@
     },
     {
       "id": "1b32ef0d-16e8-4a02-812a-c2fa775e5789",
-      "title": "FIX",
-      "text": "tasklist",
+      "title": "Tasklist Buttons style",
+      "text": "",
       "completed": false,
       "userId": "2"
     },
@@ -36,11 +29,39 @@
       "userId": "2"
     },
     {
-      "id": "1ad20793-8f4b-4892-af4f-9305bcce9b50",
-      "title": "Require",
-      "text": "title in tasks",
+      "id": "6b8df91b-1a69-4ba9-b88c-9de2d1eba51c",
+      "title": "errorHandle()",
+      "text": "Single Error handling function",
       "completed": false,
-      "userId": 2
+      "userId": "2"
+    },
+    {
+      "id": "fe84db20-76e6-4440-b27a-7a0ff0d49644",
+      "title": "Burger Nav Button",
+      "text": "For mobile",
+      "completed": false,
+      "userId": "2"
+    },
+    {
+      "id": "f2f12482-7231-45e5-ae5f-c3a672355b8a",
+      "title": "Edit task same as add",
+      "text": "22223",
+      "completed": false,
+      "userId": "2"
+    },
+    {
+      "id": "35bc0d96-4d30-430e-8fba-e032d401e207",
+      "title": " Add/Edit task btn position",
+      "text": "and size",
+      "completed": false,
+      "userId": "2"
+    },
+    {
+      "id": "a5121ace-1768-45c2-8102-c3f48c460394",
+      "title": "dsadsa ",
+      "text": "dsadsa",
+      "completed": false,
+      "userId": "2"
     }
   ],
   "users": [

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import '../styles/TaskAdd.css'
+import '../styles/TaskAdd.css';
+import '../styles/Overlay.css'; 
 
 export default function TaskAdd({ onTaskAdd, onInputChange }) {
     const [isAdding, setIsAdding] = useState(false);
@@ -36,28 +37,32 @@ export default function TaskAdd({ onTaskAdd, onInputChange }) {
     };
 
     return (
-        <div className="addTaskDiv">
+        <div className="taskAddContainer"> 
             {!isAdding ? (
-                <button onClick={handleStartAdding}>Add New Task</button>
+                <button className="addTaskBtn" onClick={handleStartAdding}>Add New Task</button>
             ) : (
                 <>
-                    <input
-                        type="text"
-                        name="title"
-                        value={newTask.title}
-                        onChange={(e) => handleInputChangeInternal(e.target.name, e.target.value)}
-                        placeholder="Enter task title..."
-                        onKeyDown={handleKeyDown}
-                    />
-                    <textarea
-                        name="text"
-                        value={newTask.text}
-                        onChange={(e) => handleInputChangeInternal(e.target.name, e.target.value)}
-                        placeholder="Enter task description..."
-                        onKeyDown={handleKeyDown}
-                    />
-                    <button onClick={handleAddTask}>Add Task</button>
-                    <button onClick={handleCancelAdd}>Cancel</button>
+                    <div className="overlay" onClick={handleCancelAdd}></div> 
+                    <div className="addTaskDiv popup"> 
+                        <input
+                            maxLength="50"
+                            type="text"
+                            name="title"
+                            value={newTask.title}
+                            onChange={(e) => handleInputChangeInternal(e.target.name, e.target.value)}
+                            placeholder="Enter task title..."
+                            onKeyDown={handleKeyDown}
+                        />
+                        <textarea
+                            name="text"
+                            value={newTask.text}
+                            onChange={(e) => handleInputChangeInternal(e.target.name, e.target.value)}
+                            placeholder="Enter task description..."
+                            onKeyDown={handleKeyDown}
+                        />
+                        <button onClick={handleAddTask}>Add Task</button>
+                        <button onClick={handleCancelAdd}>Cancel</button>
+                    </div>
                 </>
             )}
         </div>
