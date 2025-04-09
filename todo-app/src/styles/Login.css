@@ -1,0 +1,49 @@
+.loginDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginPassDiv, .loginMailDiv {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+
+    label {
+        width: 35%;
+    }
+
+    input {
+        padding: 0 .5rem;
+        width: 55%;
+        border: none;
+        border-radius: .7rem;
+        background-color: grey;
+        margin-left: 1.5rem;
+    }
+}
+
+
+.loginDiv button {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    width: 100%;
+    background-color: yellow;
+    color: black;
+}
+
+h2 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.loginDiv p,
+a {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.loginDiv a {
+    color: yellow;
+    width: fit-content;
+}

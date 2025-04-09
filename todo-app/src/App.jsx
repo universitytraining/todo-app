@@ -151,9 +151,9 @@ export default function App() {
     };
 
     const handleSavePassword = async () => {
-        if (loggedInUserId && newPassword && userEmail) {
+        if (loggedInUserId && newPassword && userEmail && userName) {
             try {
-                await axios.put(`${apiUrl}users/${loggedInUserId}`, { password: newPassword, email: userEmail });
+                await axios.put(`${apiUrl}users/${loggedInUserId}`, { password: newPassword, email: userEmail, username: userName });
                 console.log('Password updated!');
                 setIsChangingPassword(false);
                 setNewPassword('');
@@ -236,10 +236,10 @@ export default function App() {
                                 />
                             </>
                         ) : (
-                            <div>
+                            <div className="homeDiv">
                                 <h1>Welcome to your Task<i>List</i>!</h1>
-                                <p>
-                                    <Link to="/login">Log in</Link> or <Link to="/register">Register</Link>!
+                                <p className="loginRegPrompt">
+                                    <Link to="/login">Log in</Link> | <Link to="/register">Register</Link>
                                 </p>
                             </div>
                         )

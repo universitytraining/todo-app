@@ -1,10 +1,11 @@
 .taskItem {
     width: 100%;
-    border: 1px solid white;
-    margin-bottom: 10px; 
-    padding: 10px;
+    border: 2px solid yellow;
+    margin-bottom: .6rem; 
+    padding: .6rem;
     display: flex; 
     flex-direction: column; 
+    background-color: rgb(25, 42, 42);
 }
 
 .taskTitle {
@@ -18,7 +19,7 @@
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    margin-bottom: .3rem; 
+    margin-bottom: .3rem;
 }
 
 .taskHeader h3 {
@@ -88,18 +89,16 @@
     transform: scaleY(0);
     opacity: 0;
     overflow: hidden;
-    transition: transform 0.5s ease, opacity 0.5s ease;
     margin: 0;
     padding: 0 1rem;
     text-align: left;
     height: 0; 
+    transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
 .opened {
     transform: scaleY(1);
     opacity: 1;
-    height: auto;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    min-height: fit-content;
+    max-height: none;
 }
-

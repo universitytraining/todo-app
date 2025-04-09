@@ -1,13 +1,6 @@
 {
   "tasks": [
     {
-      "id": "63619a74-2529-4ef9-8c66-24f0785cee82",
-      "title": "Bigger, sexier input!",
-      "text": "should be done",
-      "completed": true,
-      "userId": 2
-    },
-    {
       "id": "e1912d5e-79bb-4f5d-9f48-88ed7b1d2084",
       "title": "Refactor",
       "text": "some things",
@@ -15,53 +8,32 @@
       "userId": 1
     },
     {
-      "id": "1b32ef0d-16e8-4a02-812a-c2fa775e5789",
-      "title": "Tasklist Buttons style",
-      "text": "",
-      "completed": true,
-      "userId": "2"
-    },
-    {
       "id": "492d72e6-52fe-4c42-9b8e-4c8298c9e4ec",
       "title": "Login/Register",
-      "text": "pages prettier",
-      "completed": false,
-      "userId": "2"
-    },
-    {
-      "id": "6b8df91b-1a69-4ba9-b88c-9de2d1eba51c",
-      "title": "errorHandle()",
-      "text": "Single Error handling function",
-      "completed": false,
+      "text": "Login Done",
+      "completed": true,
       "userId": "2"
     },
     {
       "id": "fe84db20-76e6-4440-b27a-7a0ff0d49644",
-      "title": "Burger Nav Button",
-      "text": "For mobile",
+      "title": "Burger NavButton",
+      "text": "For mobile screens",
       "completed": false,
       "userId": "2"
     },
     {
-      "id": "f2f12482-7231-45e5-ae5f-c3a672355b8a",
-      "title": "Edit task same as add",
-      "text": "22223",
-      "completed": false,
-      "userId": "2"
-    },
-    {
-      "id": "35bc0d96-4d30-430e-8fba-e032d401e207",
-      "title": " Add/Edit task btn position",
-      "text": "and size",
-      "completed": true,
-      "userId": "2"
-    },
-    {
-      "id": "6e10c9ad-91ee-4b81-be8f-2ba86a3abf45",
-      "title": "Markdown functionality?",
+      "id": "da8cc87e-4cae-4be2-9dab-82ea33daf1ad",
+      "title": "Markdown?",
       "text": "",
       "completed": false,
-      "userId": "2"
+      "userId": 1
+    },
+    {
+      "id": "b4c9064b-d227-439b-a6a1-8cd61f981e4e",
+      "title": "errorHandle()",
+      "text": "Single Error handling function /n\nsaddsadasksdlkadsa\nsdalkdaslkdsalkdsalksad\nsadlkdsalkdsalkdsa\ndsalkdsakldsakldsa\ndsa;kadslkdsalkdsalksad\ndsalkdsakladskldsaklkldaads\ndaskldsakldsalkdsalkdsalkdslkkldads\ndsakdsalkdsalkdsalkdalkdsalkslkdakldsa\ndsa;ldsak;daslkdsalkdsalkdsaklkdsakdlasksldakldsakldsa\nadskldsalkdsadgsalhgakjhjkghjkgdafhgjshgdlhgsaghgklshfaklfsa\nsafkalfshdgsjhgsajklhgsajkghajkgldshajkgldashgjkdsalhgasd\n",
+      "completed": false,
+      "userId": 1
     }
   ],
   "users": [
@@ -72,7 +44,7 @@
       "id": 1
     },
     {
-      "password": "$2a$10$dGXzOSwTdjjnFOKgMn.wR.rNyb3AqFGITN3ErGctzSQZEx.KXV.wC",
+      "password": "$2a$10$XyizcKrfgxhcGxPVrQ1W9umpQnLMQLQDlPRPURh5XQ4J7tJcCaGdC",
       "email": "svetlin.y.ermenkov@gmail.com",
       "username": "sunny",
       "id": 2

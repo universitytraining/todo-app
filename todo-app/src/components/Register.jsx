@@ -31,23 +31,23 @@ export default function Register() {
     };
 
     return (
-        <div>
+        <div className='regDiv'>
             <h2>Register</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <form onSubmit={handleSubmit}>
-                <div>
-                    <div>
-                        <label htmlFor="email">Email:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <label htmlFor="username">Username:</label>
+                <div className="regMailDiv">
+                    <label htmlFor="email">Email:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className='regUserDiv'>
+                <label htmlFor="username">Username:</label>
                     <input
                         type="text"
                         id="username"
@@ -57,7 +57,7 @@ export default function Register() {
                         required
                     />
                 </div>
-                <div>
+                <div className='regPassDiv'>
                     <label htmlFor="password">Password:</label>
                     <input
                         type="password"

@@ -19,8 +19,11 @@ ul {
 
     li {
         margin-left: 1rem;
-
     }
+}
+
+button {
+    padding: .1rem 1rem;
 }
 
 
@@ -39,7 +42,7 @@ ul {
     }
 }
 
-#delBtn {
+#delAccBtn {
     background-color: red;
     color: white;
 }
@@ -74,7 +77,6 @@ a {
     display: block;
     padding: .3rem 0;
     font-weight: 700;
-
 }
 
 a:hover {
@@ -97,7 +99,3 @@ a:hover:after {
     width: 100%;
 }
 
-button:hover {
-    box-shadow: .1rem .1rem 1rem .1rem black;
-    cursor: pointer;
-}

@@ -1,0 +1,49 @@
+.regDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.regPassDiv, .regMailDiv, .regUserDiv {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+
+    label {
+        width: 30%;
+    }
+
+    input {
+        padding: 0 .5rem;
+        width: 55%;
+        border: none;
+        border-radius: .7rem;
+        background-color: grey;
+        margin-left: 1.5rem;
+    }
+}
+
+
+.regDiv button {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    width: 100%;
+    background-color: yellow;
+    color: black;
+}
+
+h2 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.regDiv p,
+a {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.regDiv a {
+    color: yellow;
+    width: fit-content;
+}

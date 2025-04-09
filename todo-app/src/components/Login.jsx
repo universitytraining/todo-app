@@ -1,7 +1,7 @@
+import '../styles/Login.css'
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-import '../styles/Login.css'
 
 export default function Login({ onLoginSuccess }) {
     const apiUrl = "http://127.0.0.1:8787/";
@@ -32,11 +32,11 @@ export default function Login({ onLoginSuccess }) {
     };
 
     return (
-        <div>
+        <div className='loginDiv'>
             <h2>Login</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className='loginMailDiv'>
                     <label htmlFor="email">Email:</label>
                     <input
                         type="email"
@@ -47,7 +47,7 @@ export default function Login({ onLoginSuccess }) {
                         required
                     />
                 </div>
-                <div>
+                <div className='loginPassDiv'>
                     <label htmlFor="password">Password:</label>
                     <input
                         type="password"

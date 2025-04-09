@@ -10,11 +10,10 @@
         color: black;
         padding: .6rem .6rem;
         border-radius: 1rem;
-        border: none;
+        border: 2px solid white;
         font-weight: 600;
     }
 }
-
 
 .addTaskBtn {
     width: 100%;
@@ -58,7 +57,7 @@
 
 .btnPopupDiv {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .btnPopupDiv button {

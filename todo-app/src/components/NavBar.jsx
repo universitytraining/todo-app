@@ -52,7 +52,7 @@ export default function NavBar({
                             </button>
                         </li>
                         <li>
-                            <button id='delBtn' onClick={handleDeleteUser}>
+                            <button id='delAccBtn' onClick={handleDeleteUser}>
                                 Delete Account
                             </button>
                         </li>
