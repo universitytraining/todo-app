@@ -3,8 +3,8 @@
     {
       "id": "63619a74-2529-4ef9-8c66-24f0785cee82",
       "title": "Bigger, sexier input!",
-      "text": "Add and edit",
-      "completed": false,
+      "text": "should be done",
+      "completed": true,
       "userId": 2
     },
     {
@@ -18,7 +18,7 @@
       "id": "1b32ef0d-16e8-4a02-812a-c2fa775e5789",
       "title": "Tasklist Buttons style",
       "text": "",
-      "completed": false,
+      "completed": true,
       "userId": "2"
     },
     {
@@ -53,13 +53,13 @@
       "id": "35bc0d96-4d30-430e-8fba-e032d401e207",
       "title": " Add/Edit task btn position",
       "text": "and size",
-      "completed": false,
+      "completed": true,
       "userId": "2"
     },
     {
-      "id": "a5121ace-1768-45c2-8102-c3f48c460394",
-      "title": "dsadsa ",
-      "text": "dsadsa",
+      "id": "6e10c9ad-91ee-4b81-be8f-2ba86a3abf45",
+      "title": "Markdown functionality?",
+      "text": "",
       "completed": false,
       "userId": "2"
     }

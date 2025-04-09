@@ -111,14 +111,14 @@ export default function Task({ task, deleteTask, toggleComplete, onTaskUpdated }
                 <div className='taskBtnDiv'>
                     {isEditing && (
                         <>
-                            <button onClick={handleSave}>Save</button>
-                            <button onClick={handleCancel}>Cancel</button>
+                            <button className='saveTaskBtn' onClick={handleSave}>Save</button>
+                            <button className='cancelTaskBtn' onClick={handleCancel}>Cancel</button>
                         </>
                     )}
                     {!isEditing && (
                         <>
                             <button className='viewBtn' onClick={viewDescription}>View</button>
-                            <button onClick={() => deleteTask(task.id)}>Delete</button>
+                            <button className='deleteBtn' onClick={() => deleteTask(task.id)}>Delete</button>
                         </>
                     )}
                 </div>

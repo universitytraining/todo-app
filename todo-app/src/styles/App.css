@@ -53,64 +53,7 @@ section {
     margin: 0;
 }
 
-.taskItem {
-    width: 100%;
-    border: 1px solid white;
-    margin-bottom: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
 
-.taskTitle {
-    margin-left: .5rem;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.taskHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-.taskHeader h3 {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    text-align: left;
-}
-
-.taskHeader .taskBtnDiv {
-    align-self: center;
-}
-
-.taskHeader .taskBtnDiv button {
-    margin-left: 0.5rem;
-}
-
-.descriptionP {
-    cursor: pointer;
-    transform-origin: top;
-    transform: scaleY(0);
-    opacity: 0;
-    overflow: hidden;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    margin: 0;
-    padding: 0 1rem;
-    text-align: left;
-    height: 0;
-}
-
-.opened {
-    transform: scaleY(1);
-    opacity: 1;
-    height: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
 
 
 @media (max-width: 375px) {

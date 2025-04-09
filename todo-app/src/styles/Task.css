@@ -18,7 +18,7 @@
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    margin-bottom: 5px; 
+    margin-bottom: .3rem; 
 }
 
 .taskHeader h3 {
@@ -29,6 +29,7 @@
     text-align: left; 
 }
 
+
 .taskHeader .taskBtnDiv {
     align-self: center; 
     min-width: 8rem;
@@ -36,6 +37,49 @@
 
 .taskHeader .taskBtnDiv button {
     margin-left: 0.5rem; 
+}
+
+.taskHeader input:nth-of-type(1) {
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: 1rem;
+}
+
+.taskHeader input:nth-of-type(2) {
+    height: 2rem;
+    width: 80%;
+    font-size: 1.1rem;
+    padding: .5rem 1rem;
+    
+}
+
+.taskItem textarea {
+    width: 64%;
+    height: 8rem;
+    margin-left: 2.8rem;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.viewBtn, .deleteBtn {
+    width: 6rem;
+    height: 3rem;
+    font-size: 1.1rem;
+}
+
+.saveTaskBtn, .cancelTaskBtn {
+    width: 10rem;
+    height: 3rem;
+    margin-right: 2rem;
+    font-size: 1.1rem;
+}
+
+.saveTaskBtn, .viewBtn {
+    background-color: blue;
+}
+
+.cancelTaskBtn, .deleteBtn {
+    background-color: orangered;
 }
 
 .descriptionP {
@@ -55,7 +99,7 @@
     transform: scaleY(1);
     opacity: 1;
     height: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 }
 

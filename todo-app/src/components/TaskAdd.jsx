@@ -60,8 +60,11 @@ export default function TaskAdd({ onTaskAdd, onInputChange }) {
                             placeholder="Enter task description..."
                             onKeyDown={handleKeyDown}
                         />
-                        <button onClick={handleAddTask}>Add Task</button>
-                        <button onClick={handleCancelAdd}>Cancel</button>
+
+                        <div className='btnPopupDiv'>
+                            <button className="popupAddBtn" onClick={handleAddTask}>Add Task</button>
+                            <button className="popupCancelBtn" onClick={handleCancelAdd}>Cancel</button>
+                        </div>
                     </div>
                 </>
             )}
