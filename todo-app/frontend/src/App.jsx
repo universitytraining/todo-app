@@ -10,7 +10,9 @@ import axios from 'axios';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 
 export default function App() {
-    const apiUrl = "http://127.0.0.1:8787/";
+    const apiUrlDev = "http://127.0.0.1:8787/";
+    const apiUrlProd = "https://tasklist-vdgm.onrender.com/";
+    const apiUrl = process.env.NODE_ENV === 'production' ? apiUrlProd : apiUrlDev;
     const [tasks, setTasks] = useState([]);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [loggedInUserId, setLoggedInUserId] = useState(null);

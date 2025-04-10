@@ -1,0 +1,11 @@
+{
+  "name": "todo-app-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "node ./services/server.cjs"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0"
+  }
+}

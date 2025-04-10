@@ -8,13 +8,6 @@
       "userId": 1
     },
     {
-      "id": "492d72e6-52fe-4c42-9b8e-4c8298c9e4ec",
-      "title": "Login/Register",
-      "text": "Login Done",
-      "completed": true,
-      "userId": "2"
-    },
-    {
       "id": "fe84db20-76e6-4440-b27a-7a0ff0d49644",
       "title": "Burger NavButton",
       "text": "For mobile screens",
@@ -24,7 +17,7 @@
     {
       "id": "da8cc87e-4cae-4be2-9dab-82ea33daf1ad",
       "title": "Markdown?",
-      "text": "",
+      "text": "Nope",
       "completed": false,
       "userId": 1
     },
@@ -32,6 +25,13 @@
       "id": "b4c9064b-d227-439b-a6a1-8cd61f981e4e",
       "title": "errorHandle()",
       "text": "Single Error handling function /n\nsaddsadasksdlkadsa\nsdalkdaslkdsalkdsalksad\nsadlkdsalkdsalkdsa\ndsalkdsakldsakldsa\ndsa;kadslkdsalkdsalksad\ndsalkdsakladskldsaklkldaads\ndaskldsakldsalkdsalkdsalkdslkkldads\ndsakdsalkdsalkdsalkdalkdsalkslkdakldsa\ndsa;ldsak;daslkdsalkdsalkdsaklkdsakdlasksldakldsakldsa\nadskldsalkdsadgsalhgakjhjkghjkgdafhgjshgdlhgsaghgklshfaklfsa\nsafkalfshdgsjhgsajklhgsajkghajkgldshajkgldashgjkdsalhgasd\n",
+      "completed": false,
+      "userId": 1
+    },
+    {
+      "id": "6c598b47-fb40-412b-8925-ce3abc3357d5",
+      "title": "Docker backend on google",
+      "text": "github.io for frontend",
       "completed": false,
       "userId": 1
     }
