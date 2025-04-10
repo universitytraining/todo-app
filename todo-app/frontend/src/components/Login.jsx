@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
-export default function Login({ onLoginSuccess }) {
-    const apiUrl = "http://127.0.0.1:8787/";
+export default function Login({ onLoginSuccess, apiUrl }) {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: '',

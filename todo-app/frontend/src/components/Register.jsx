@@ -3,8 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/Register.css'
 
-export default function Register() {
-    const apiUrl = "http://127.0.0.1:8787/";
+export default function Register(apiUrl) {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: '',
