@@ -247,8 +247,9 @@ export default function App() {
                         )
                     }
                 />
-                <Route path="/register" element={<Register />} />
-                <Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} />} />
+                {console.log(apiUrl)}
+<Route path="/register" element={<Register apiUrl={apiUrl} />} />
+<Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} apiUrl={apiUrl} />} />
             </Routes>
         </>
     );

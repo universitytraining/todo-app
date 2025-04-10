@@ -16,7 +16,7 @@ export default function NavBar({
     return (
         <nav>
             <ul>
-                <li id='logoText'><img src="/todo-app/frontend/TL.png" alt="" />Task<i>List</i></li>
+                <li id='logoText'><img src="/todo-app/TL.png" alt="" />Task<i>List</i></li>
                 <li>
                     {!isLoggedIn ?
                         <Link to="/">Home</Link> : <Link to="/">My tasks</Link>
