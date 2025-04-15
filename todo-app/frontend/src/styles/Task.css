@@ -124,16 +124,15 @@ h3 {
     .deleteBtn,
     .saveTaskBtn,
     .cancelTaskBtn {
-        width: 3.5rem;
-        height: 3rem;
+        width: 3.3rem;
+        height: 2.7rem;
         margin: 0;
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     .taskTitle {
         width: 100%;
     }
-
 }
 
 @media (768px <=width <=992px) {
