@@ -112,7 +112,8 @@ h3 {
 
 @media (width <=768px) {
     h3 {
-        width: 70%;
+        width: 60%;
+        font-size: 1rem;
     }
 
     .taskBtnDiv {
@@ -123,9 +124,10 @@ h3 {
     .deleteBtn,
     .saveTaskBtn,
     .cancelTaskBtn {
-        width: 4.1rem;
+        width: 3.5rem;
         height: 3rem;
         margin: 0;
+        font-size: .9rem;
     }
 
     .taskTitle {
