@@ -1,5 +1,5 @@
 import '../styles/NavBar.css'
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function NavBar({
@@ -13,13 +13,27 @@ export default function NavBar({
     handleCancelPasswordChange,
     handleDeleteUser,
 }) {
+
+    const [isBurgerOpen, setIsBurgerOpen] = useState('false')
+    const handleBurgerOpen = () => {
+        setIsBurgerOpen(!isBurgerOpen);
+        const navList = document.querySelector('ul')
+
+        if (navList.classList.contains("navToggle")) {
+            navList.classList.remove("navToggle");
+        } else {
+            navList.classList.add("navToggle");
+        }
+
+    }
+
     return (
         <nav>
-            <ul>
-                <li id='logoText'><img src="/todo-app/TL.png" alt="" />Task<i>List</i></li>
+            <li id='logoText'><img src="/todo-app/TL.png" alt="" />Task<i>List</i></li>
+            <ul className='navToggle'>
                 <li>
                     {!isLoggedIn ?
-                        <Link to="/">Home</Link> : <Link to="/">My tasks</Link>
+                        <Link to="/">Home</Link> : <Link to="/">Tasks</Link>
                     }
                 </li>
                 {!isLoggedIn &&
@@ -29,7 +43,6 @@ export default function NavBar({
                 }
                 {isLoggedIn ? (
                     <>
-
                         {isChangingPassword && (
                             <>
                                 <li>
@@ -43,7 +56,6 @@ export default function NavBar({
                                         onChange={handleNewPasswordChange}
                                     />
                                 </li>
-
                             </>
                         )}
                         <li>
@@ -66,6 +78,7 @@ export default function NavBar({
                     </li>
                 )}
             </ul>
+            <button id='burgerBtn' onClick={handleBurgerOpen} style={{ color: isBurgerOpen ? 'black' : 'red' }}>  {isBurgerOpen ? "☰" : "X"}</button>
         </nav>
     )
 }

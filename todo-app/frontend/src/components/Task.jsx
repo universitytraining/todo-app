@@ -90,13 +90,13 @@ export default function Task({ task, deleteTask, toggleComplete, onTaskUpdated }
                     {isEditing ? (
                         <>
                             <input
-                                maxLength="50"
+                                maxLength="200"
                                 type="text"
                                 name="editTitle"
                                 value={editTitle}
                                 onChange={handleInputChange}
                             />
-                            {titleError && <p className="error-message">{titleError}</p>} 
+                            {titleError && <p>{titleError}</p>} 
                         </>
                     ) : (
                         <span

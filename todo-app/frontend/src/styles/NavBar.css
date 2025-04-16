@@ -1,82 +1,91 @@
 nav {
-    width: 96vw;
-    position: sticky;
-    top: 0;
+    position: relative;
     background-color: rgb(229, 195, 0);
-    margin: 0;
-    padding: .5rem;
-    z-index: 100;
-    justify-content: center;
-    align-items: center;
+    width: 95vw;
+}
+
+.navToggle {
+    display: none;
 }
 
 ul {
-    list-style-type: none;
     margin: 0;
-    padding: 0;
-    display: flex;
-    width: 98%;
-
-    li {
-        margin-left: 1rem;
-    }
+    float: inline-end;
+    border-top: .2rem solid rgba(0, 0, 0, 0.556);
+    width: 40%;
 }
 
-button {
-    padding: .1rem 1rem;
+ul li {
+    margin-top: .5rem;
 }
 
-
-#logoText {
-    display: flex;
+li {
+    text-align: end;
     color: black;
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding: 0;
-    margin-right: auto;
-    text-align: center;
+    margin: 1rem 1rem;
+    list-style: none;
 
-    img {
-        height: 2rem;
-        margin-right: 1rem;
+    a {
+        display: inline-block;
     }
+}
+
+#passChangeBtn {
+    background-color: blue;
+}
+
+#passChangeSave {
+    background-color: green;
 }
 
 #delAccBtn {
     background-color: red;
-    color: white;
 }
 
-#passChangeBtn {
-    background-color: white;
+#logoText {
+    display: flex;
     color: black;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: -5px 5px 25px black;
 }
 
-#passChangeSave {
-    background-color: rgb(82, 255, 82);
+#logoText img {
+    box-sizing: border-box;
+    border-radius: 5rem;
+    margin-right: .5rem;
+    height: 2.1rem;
     color: black;
-}
-
-#passChangeInput {
-    display: block;
-    border-radius: 1rem;
-    height: 70%;
-    padding: .2rem 1rem;
+    font-weight: 600;
+    box-shadow: -5px 5px 20px black;
 }
 
 #logoutLink {
-    box-sizing: border-box;
-    color: rgb(161, 0, 0);
+    color: darkred;
 }
 
+#burgerBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    line-height: .4rem;
+    font-size: 2.5rem;
+    background: none;
+    text-align: center;
+    text-justify: center;
+}
 
 a {
+    display: block;
     color: black;
     text-decoration: none;
     position: relative;
-    display: block;
-    padding: .3rem 0;
+    padding: .4rem 0;
     font-weight: 700;
+    width: fit-content;
 }
 
 a:hover {
@@ -99,3 +108,47 @@ a:hover:after {
     width: 100%;
 }
 
+
+@media (width >=992px) {
+    nav {
+        width: 98vw;
+        padding-bottom: .7rem;
+    }
+
+    #burgerBtn {
+        display: none;
+    }
+
+    .navToggle {
+        display: flex;
+    }
+
+    ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        border-top: none;
+        width: 80%;
+        padding-left: 0;
+    }
+
+    li,
+    #logoText {
+        display: inline-block;
+    }
+
+    li {
+        margin: 0 .5rem;
+
+        a {
+            margin: 0 .5rem;
+        }
+    }
+
+
+    #logoText,
+    #logoText img {
+        margin: .3rem .5rem 0 .5rem;
+        vertical-align: text-top;
+    }
+}

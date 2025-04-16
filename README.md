@@ -24,12 +24,13 @@ Install:
 
 2. cd todo-app
 
-3. npm install
-
-4. npm run dev
-
-5. npm run server
-
+3. Install dependencies and run environment for front and backend. We have to run npm install in both directories, and then npm run dev in the frontend dir, and npm run server in the backend dir.
+- cd frontend
+- npm install
+- npm run dev 
+- cd backend
+- npm install 
+- npm run server
 
 Progress
 1. Initiate Vite+ReactJS project. 
@@ -38,7 +39,8 @@ Progress
 - AXIOS
 - React-Router-DOM
 - UUID
-3. Set up CRUD components
+3. Set up CRUD and routing components
+- NavBar
 - Task
 - TaskList 
 - TaskAdd
@@ -47,3 +49,5 @@ Progress
 - Login
 - Register
 - Delete user with all its tasks
+5. Deployed backend to Render and frontend to github.io.
+6. Mobile version (In progress)

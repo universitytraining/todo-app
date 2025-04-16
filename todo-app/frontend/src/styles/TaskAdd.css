@@ -80,8 +80,10 @@
     margin-right: 0;
 }
 
-@media (max-width: 420px) {
-    .addTaskBtn {
-        font-size: 1.2rem;
+
+@media (width <=992px) {
+    .taskAddContainer,
+    .addTaskDiv {
+        width: 80%;
     }
 }
