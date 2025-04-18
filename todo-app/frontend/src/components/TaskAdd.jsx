@@ -44,8 +44,8 @@ export default function TaskAdd({ onTaskAdd, onInputChange }) {
                 <>
                     <div className="overlay" onClick={handleCancelAdd}></div> 
                     <div className="addTaskDiv popup"> 
-                        <input
-                            maxLength="50"
+                        <textarea
+                            maxLength="200"
                             type="text"
                             name="title"
                             value={newTask.title}

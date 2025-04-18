@@ -5,7 +5,7 @@
     width: 50%;
 
 
-    button {
+    .addTaskBtn {
         background-color: rgb(229, 195, 0);
         color: black;
         padding: .6rem .6rem;
@@ -23,18 +23,18 @@
 
 .addTaskDiv.popup {
     position: fixed;
-    width: 50%;
+    width: 70vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: grey;
+    background-color: rgb(195, 166, 0);
     padding: 1rem;
     border-radius: .5rem;
     box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.2);
     z-index: 100;
 }
 
-.addTaskDiv.popup input,
+.addTaskDiv.popup textarea[name='title'],
 .addTaskDiv.popup textarea,
 .addTaskDiv.popup button {
     margin-bottom: 1rem;
@@ -45,13 +45,13 @@
 }
 
 
-.addTaskDiv.popup input {
-    height: 4rem;
+.addTaskDiv.popup textarea[name='title'] {
+    height: 15vh;
     font-size: 1.2rem;
 }
 
 .addTaskDiv.popup textarea {
-    height: 12rem;
+    height: 35vh;
     font-size: 1.1rem;
 }
 
@@ -60,14 +60,17 @@
     justify-content: space-between;
 }
 
-.btnPopupDiv button {
+.popupAddBtn,
+.popupCancelBtn {
     width: 40%;
     min-height: 3rem;
     margin-right: 1rem;
     color: white;
     font-size: 1.1rem;
-    border: none;
+    font-weight: 700;
     border-radius: .5rem;
+    box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.4);
+
 }
 
 
@@ -82,8 +85,35 @@
 
 
 @media (width <=992px) {
+
     .taskAddContainer,
     .addTaskDiv {
         width: 80%;
+    }
+
+    .addTaskDiv.popup {
+        width: 80vw;
+        height: 90vh;
+        margin: 0;
+
+        textarea[name='title'] {
+            height: 25vh;
+            text-align: start;
+        }
+
+        textarea {
+            height: 55vh;
+            margin-bottom: 0;
+        }
+
+        .btnPopupDiv {
+            margin: 0;
+            padding: 0;
+        }
+
+        .popupAddBtn,
+        .popupCancelBtn {
+            min-height: 2rem;
+        }
     }
 }

@@ -99,8 +99,8 @@ export default function App() {
         try {
             const confirm = window.confirm("Are you sure you want to delete task?");
             if (confirm) {
-            await axios.delete(apiUrl + `tasks/${taskId}`);
-            setTasks(tasks.filter((task) => task.id !== taskId));
+                await axios.delete(apiUrl + `tasks/${taskId}`);
+                setTasks(tasks.filter((task) => task.id !== taskId));
             } else {
                 return;
             }
@@ -248,8 +248,8 @@ export default function App() {
                     }
                 />
                 {console.log(apiUrl)}
-<Route path="/register" element={<Register apiUrl={apiUrl} />} />
-<Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} apiUrl={apiUrl} />} />
+                <Route path="/register" element={<Register apiUrl={apiUrl} />} />
+                <Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} apiUrl={apiUrl} />} />
             </Routes>
         </>
     );
