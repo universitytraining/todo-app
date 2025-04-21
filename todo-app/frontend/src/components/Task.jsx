@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import '../styles/Task.css';
+import React, { useState } from 'react';
 
 export default function Task({ task, deleteTask, toggleComplete, onTaskUpdated }) {
     const [isEditing, setIsEditing] = useState(false);
@@ -11,16 +11,16 @@ export default function Task({ task, deleteTask, toggleComplete, onTaskUpdated }
     const viewDescription = (event) => {
         const clickedViewBtn = event.target;
         const taskBtnDiv = clickedViewBtn.closest(".taskBtnDiv");
+        const taskHeader = taskBtnDiv.parentNode;
+        const description = taskHeader ? taskHeader.nextElementSibling : null;
+        const viewBtn = taskBtnDiv.querySelector(".viewBtn");
+
 
         if (!taskBtnDiv) {
             console.error("Could not find .taskBtnDiv ancestor.");
             return;
         }
 
-        const taskHeader = taskBtnDiv.parentNode;
-        const description = taskHeader ? taskHeader.nextElementSibling : null;
-
-        const viewBtn = taskBtnDiv.querySelector(".viewBtn");
 
         if (description && viewBtn && description.classList.contains("descriptionP")) {
             if (description.classList.contains("opened")) {
@@ -60,9 +60,7 @@ export default function Task({ task, deleteTask, toggleComplete, onTaskUpdated }
             setTitleError('Title is required!');
             return; 
         }
-
         setTitleError(''); 
-
         if (onTaskUpdated) {
             onTaskUpdated({ ...task, title: editTitle, text: editText });
             setIsEditing(false);
@@ -87,6 +85,7 @@ export default function Task({ task, deleteTask, toggleComplete, onTaskUpdated }
                         checked={task.completed}
                         onChange={() => toggleComplete(task)}
                     />
+
                     {isEditing ? (
                         <>
                             <input
@@ -108,21 +107,23 @@ export default function Task({ task, deleteTask, toggleComplete, onTaskUpdated }
                         </span>
                     )}
                 </h3>
+                
                 <div className='taskBtnDiv'>
-                    {isEditing && (
+                    {isEditing ? (
                         <>
                             <button className='saveTaskBtn' onClick={handleSave}>Save</button>
                             <button className='cancelTaskBtn' onClick={handleCancel}>Cancel</button>
                         </>
-                    )}
-                    {!isEditing && (
+                    ) : (
                         <>
                             <button className='viewBtn' onClick={viewDescription}>View</button>
                             <button className='deleteBtn' onClick={() => deleteTask(task.id)}>Delete</button>
                         </>
                     )}
                 </div>
+
             </div>
+            
             {isEditing ? (
                 <textarea
                     name="editText"

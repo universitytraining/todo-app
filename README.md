@@ -1,6 +1,6 @@
-To-Do app in ReactJS
+# To-Do app in ReactJS (Task*List*)
 
-Exam criteria
+## Exam criteria
 
 1. Components
 2. Routing
@@ -9,7 +9,7 @@ Exam criteria
 5. REST API
 6. GitHub
 
-Web app contents:
+### Web app contents:
 
 1. Log-in and register forms
 2. Auth
@@ -18,36 +18,41 @@ Web app contents:
 5. Main page with a nav bar; main body, containing dynamically rendered data from the DB
 6. Theme: "To Do" application
 
-Install:
+## Install:
 
-1. git pull https://github.com/universitytraining/todo-app.git
+1. `git pull https://github.com/universitytraining/todo-app.git`
 
-2. cd todo-app
+2. `cd todo-app`
 
-3. Install dependencies and run environment for front and backend. We have to run npm install in both directories, and then npm run dev in the frontend dir, and npm run server in the backend dir.
-- cd frontend
-- npm install
-- npm run dev 
-- cd backend
-- npm install 
-- npm run server
+3. Install dependencies and run front and backend environments. We have to run `npm install` in ***both*** directories, and then `npm run dev` in the **/frontend** dir, and `npm run server` in the **/backend** dir.
+- `cd frontend`
+- `npm install`
+- `npm run dev`
 
-Progress
-1. Initiate Vite+ReactJS project. 
-2. Install Dependencies: 
-- JSON-Server & JSON-Server-Auth
-- AXIOS
-- React-Router-DOM
-- UUID
-3. Set up CRUD and routing components
-- NavBar
-- Task
-- TaskList 
-- TaskAdd
-- TaskEdit
-4. Authentication
-- Login
-- Register
-- Delete user with all its tasks
-5. Deployed backend to Render and frontend to github.io.
-6. Mobile version (In progress)
+#### Then:
+- `cd backend`
+- `npm install` 
+- `npm run server`
+
+#### Or:
+
+**Just visit the [app on github.io](https://universitytraining.github.io/todo-app/)** :)
+
+## Progress
+1. Initiate Vite+ReactJS project
+2. Install Dependencies
+    - JSON-Server & JSON-Server-Auth
+    - AXIOS
+    - React-Router-DOM
+    - UUID
+3. CRUD components
+    - NavBar
+    - Task
+    - TaskList 
+    - TaskAdd
+4. Authentication components
+    - Login
+    - Register
+5. Move files around to get ready for deployment
+6. Deploy backend to Render and frontend to github.io
+7. Mobile version

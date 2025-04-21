@@ -1,10 +1,13 @@
-import { useState } from "react";
 import '../styles/TaskAdd.css';
 import '../styles/Overlay.css'; 
+import { useState } from "react";
+
+
 
 export default function TaskAdd({ onTaskAdd, onInputChange }) {
     const [isAdding, setIsAdding] = useState(false);
     const [newTask, setNewTask] = useState({ title: '', text: '' });
+
 
     const handleInputChangeInternal = (name, value) => {
         setNewTask(prevTask => ({ ...prevTask, [name]: value }));
@@ -38,11 +41,13 @@ export default function TaskAdd({ onTaskAdd, onInputChange }) {
 
     return (
         <div className="taskAddContainer"> 
+            
             {!isAdding ? (
                 <button className="addTaskBtn" onClick={handleStartAdding}>Add New Task</button>
             ) : (
                 <>
-                    <div className="overlay" onClick={handleCancelAdd}></div> 
+                    <div className="overlay" onClick={handleCancelAdd}></div>
+
                     <div className="addTaskDiv popup"> 
                         <textarea
                             maxLength="200"
@@ -53,6 +58,7 @@ export default function TaskAdd({ onTaskAdd, onInputChange }) {
                             placeholder="Enter task title..."
                             onKeyDown={handleKeyDown}
                         />
+
                         <textarea
                             name="text"
                             value={newTask.text}
@@ -65,6 +71,7 @@ export default function TaskAdd({ onTaskAdd, onInputChange }) {
                             <button className="popupAddBtn" onClick={handleAddTask}>Add Task</button>
                             <button className="popupCancelBtn" onClick={handleCancelAdd}>Cancel</button>
                         </div>
+                        
                     </div>
                 </>
             )}

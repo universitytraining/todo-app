@@ -3,7 +3,9 @@
     flex-direction: column;
 }
 
-.regPassDiv, .regMailDiv, .regUserDiv {
+.regPassDiv,
+.regMailDiv,
+.regUserDiv {
     display: flex;
     justify-content: space-between;
     margin: 1rem 0;

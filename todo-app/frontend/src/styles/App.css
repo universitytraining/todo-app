@@ -84,3 +84,16 @@ section {
 .loginRegPrompt a {
     color: yellow;
 }
+
+
+
+@media (width <=992px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .loginRegPrompt,
+    .loginRegPrompt a {
+        font-size: 2rem;
+    }
+}

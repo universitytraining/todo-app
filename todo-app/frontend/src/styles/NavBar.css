@@ -108,10 +108,14 @@ a:hover:after {
     width: 100%;
 }
 
+
 @media (width <=768px) {
-    ul, li {
+
+    ul,
+    li {
         width: 80%;
     }
+
     #passChangeInput {
         width: 90%;
     }

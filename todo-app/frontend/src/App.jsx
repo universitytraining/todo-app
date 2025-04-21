@@ -1,18 +1,22 @@
 import "./styles/App.css";
 import { useState, useEffect, useCallback } from 'react';
 import { v4 as uuid } from "uuid";
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import TaskAdd from './components/TaskAdd';
 import TaskList from './components/TaskList';
 import Register from './components/Register';
 import Login from './components/Login';
 import NavBar from './components/NavBar'
-import axios from 'axios';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+
+
 
 export default function App() {
     const apiUrlDev = "http://127.0.0.1:8787/";
     const apiUrlProd = "https://tasklist-vdgm.onrender.com/";
     const apiUrl = process.env.NODE_ENV === 'production' ? apiUrlProd : apiUrlDev;
+    const navigate = useNavigate();
+
     const [tasks, setTasks] = useState([]);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [loggedInUserId, setLoggedInUserId] = useState(null);
@@ -20,8 +24,9 @@ export default function App() {
     const [newPassword, setNewPassword] = useState('');
     const [userEmail, setUserEmail] = useState('');
     const [userName, setUserName] = useState('');
-    const navigate = useNavigate();
     const [newTaskToAdd, setNewTaskToAdd] = useState({ title: '', text: '' });
+
+
 
     const fetchTasks = useCallback(async (userId) => {
         console.log("fetchTasks called for user:", userId);
@@ -34,6 +39,8 @@ export default function App() {
         }
     }, [apiUrl]);
 
+
+
     const fetchUserEmail = useCallback(async (userId) => {
         if (userId) {
             try {
@@ -45,6 +52,8 @@ export default function App() {
         }
     }, [apiUrl]);
 
+
+
     const fetchUserName = useCallback(async (userId) => {
         if (userId) {
             try {
@@ -55,6 +64,8 @@ export default function App() {
             }
         }
     }, [apiUrl]);
+
+
 
     useEffect(() => {
         const token = localStorage.getItem('token');
@@ -75,6 +86,8 @@ export default function App() {
         }
     }, [fetchTasks, fetchUserEmail, fetchUserName]);
 
+
+
     const addTaskHandle = async () => {
         if (loggedInUserId && newTaskToAdd.title.trim()) {
             try {
@@ -91,9 +104,13 @@ export default function App() {
         }
     };
 
+
+
     const handleInputChange = (name, value) => {
         setNewTaskToAdd(prevTask => ({ ...prevTask, [name]: value }));
     };
+
+
 
     const deleteTask = async (taskId) => {
         try {
@@ -109,6 +126,8 @@ export default function App() {
         }
     };
 
+
+
     const toggleComplete = async (taskToUpdate) => {
         try {
             const updatedTask = { ...taskToUpdate, completed: !taskToUpdate.completed };
@@ -120,6 +139,8 @@ export default function App() {
             console.error("Task completion err:", err);
         }
     };
+
+
 
     const handleLogout = () => {
         localStorage.removeItem('token');
@@ -133,6 +154,8 @@ export default function App() {
         navigate('/login');
     };
 
+
+
     const handleLoginSuccess = (userId) => {
         setIsLoggedIn(true);
         setLoggedInUserId(userId);
@@ -143,14 +166,20 @@ export default function App() {
         fetchUserName(userId);
     };
 
+
+
     const handleTogglePasswordChange = () => {
         setIsChangingPassword(!isChangingPassword);
         setNewPassword('');
     };
 
+
+
     const handleNewPasswordChange = (event) => {
         setNewPassword(event.target.value);
     };
+
+
 
     const handleSavePassword = async () => {
         if (loggedInUserId && newPassword && userEmail && userName) {
@@ -168,10 +197,14 @@ export default function App() {
         }
     };
 
+
+
     const handleCancelPasswordChange = () => {
         setIsChangingPassword(false);
         setNewPassword('');
     };
+
+
 
     const handleDeleteUser = async () => {
         if (!loggedInUserId) {
@@ -204,6 +237,10 @@ export default function App() {
         }
     };
 
+
+
+
+
     return (
         <>
             <NavBar
@@ -217,17 +254,21 @@ export default function App() {
                 handleCancelPasswordChange={handleCancelPasswordChange}
                 handleDeleteUser={handleDeleteUser}
             />
+
             <Routes>
+
                 <Route
                     path="/"
                     element={
                         isLoggedIn ? (
                             <>
                                 <h1><span id="username">{userName}</span>'s tasks:</h1>
+
                                 <TaskAdd
                                     onTaskAdd={addTaskHandle}
                                     onInputChange={handleInputChange}
                                 />
+
                                 <TaskList
                                     tasks={tasks}
                                     deleteTask={deleteTask}
@@ -236,10 +277,12 @@ export default function App() {
                                     apiUrl={apiUrl}
                                     setTasks={setTasks}
                                 />
+
                             </>
                         ) : (
                             <div className="homeDiv">
                                 <h1>Welcome to your Task<i>List</i>!</h1>
+
                                 <p className="loginRegPrompt">
                                     <Link to="/login">Log in</Link> | <Link to="/register">Register</Link>
                                 </p>
@@ -247,9 +290,11 @@ export default function App() {
                         )
                     }
                 />
-                {console.log(apiUrl)}
+
                 <Route path="/register" element={<Register apiUrl={apiUrl} />} />
+
                 <Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} apiUrl={apiUrl} />} />
+
             </Routes>
         </>
     );

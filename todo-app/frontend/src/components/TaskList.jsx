@@ -1,9 +1,11 @@
 import React from 'react';
-import Task from './Task';
-import '../styles/TaskList.css';
 import axios from 'axios';
+import Task from './Task';
 
-export default function TaskList({ tasks, deleteTask, toggleComplete, loggedInUserId, apiUrl, setTasks }) {
+
+
+export default function TaskList({ tasks, deleteTask, toggleComplete, apiUrl, setTasks }) {
+
     const handleTaskUpdatedInList = async (updatedTask) => {
         try {
             await axios.put(`${apiUrl}tasks/${updatedTask.id}`, updatedTask);
@@ -15,6 +17,9 @@ export default function TaskList({ tasks, deleteTask, toggleComplete, loggedInUs
             console.error("Error updating task:", err);
         }
     };
+
+
+
 
     return (
         <section>

@@ -3,7 +3,9 @@
     flex-direction: column;
 }
 
-.loginPassDiv, .loginMailDiv {
+
+.loginPassDiv,
+.loginMailDiv {
     display: flex;
     justify-content: space-between;
     margin: 1rem 0;

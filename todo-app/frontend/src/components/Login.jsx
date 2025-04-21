@@ -3,17 +3,24 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
+
+
 export default function Login({ onLoginSuccess, apiUrl }) {
     const navigate = useNavigate();
+    
     const [formData, setFormData] = useState({
         email: '',
         password: '',
     });
     const [error, setError] = useState('');
 
+
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -30,10 +37,16 @@ export default function Login({ onLoginSuccess, apiUrl }) {
         }
     };
 
+
+
+
+
     return (
         <div className='loginDiv'>
             <h2>Login</h2>
+
             {error && <p style={{ color: 'red' }}>{error}</p>}
+
             <form onSubmit={handleSubmit}>
                 <div className='loginMailDiv'>
                     <label htmlFor="email">Email:</label>
@@ -46,6 +59,7 @@ export default function Login({ onLoginSuccess, apiUrl }) {
                         required
                     />
                 </div>
+
                 <div className='loginPassDiv'>
                     <label htmlFor="password">Password:</label>
                     <input
@@ -57,8 +71,10 @@ export default function Login({ onLoginSuccess, apiUrl }) {
                         required
                     />
                 </div>
+
                 <button type="submit">Login</button>
             </form>
+            
             <p>Don't have an account? <Link to="/register">Register here</Link></p>
         </div>
     );
