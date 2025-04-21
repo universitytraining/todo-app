@@ -20,7 +20,7 @@
 
 ## Install:
 
-1. `git pull https://github.com/universitytraining/todo-app.git`
+1. `git clone https://github.com/universitytraining/todo-app.git`
 
 2. `cd todo-app`
 
