@@ -16,6 +16,7 @@
     }
 
     input {
+        color: black;
         padding: 0 .5rem;
         width: 55%;
         border: none;

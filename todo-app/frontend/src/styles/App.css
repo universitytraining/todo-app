@@ -42,7 +42,7 @@ input {
     padding: .1rem .3rem;
 }
 
-#username {
+#usernameSpan {
     font-style: italic;
     font-weight: 600;
     color: rgba(255, 255, 0, 0.752);

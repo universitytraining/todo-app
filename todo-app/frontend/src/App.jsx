@@ -262,7 +262,7 @@ export default function App() {
                     element={
                         isLoggedIn ? (
                             <>
-                                <h1><span id="username">{userName}</span>'s tasks:</h1>
+                                <h1><span id="usernameSpan">{userName}</span>'s tasks:</h1>
 
                                 <TaskAdd
                                     onTaskAdd={addTaskHandle}
